@@ -1,0 +1,42 @@
+.container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 4em;
+    align-content: center;
+}
+
+.form-section, .results-section {
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    background-color: orange;
+    color: white;
+    padding: 10px;
+}
+.form-header h2{
+    width: 100%;
+    text-align: center;
+}
+.sudents-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    transition-duration: 0.4s;
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+  }
