@@ -9,9 +9,24 @@
     align-content: center;
 }
 
-.form-section, .results-section {
+.form-section{
     justify-content: center;
     align-items: center;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: orange;
+    align-items: center;
+    color: white;
+}
+
+form >button{
+    width: 100%;
+}
+.field {
+    width: 100%;
 }
 
 h2 {
@@ -26,6 +41,7 @@ h2 {
 .sudents-buttons{
     display: flex;
     justify-content: space-between;
+    gap: 2em;
 }
 
 button {
@@ -40,4 +56,9 @@ button:hover {
     transition-duration: 0.4s;
     box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 
-  }
+}
+
+.datadisplay {
+    display: flex;
+    justify-content: space-between;
+}

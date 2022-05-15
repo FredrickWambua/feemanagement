@@ -5,11 +5,21 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './feemanager.component.html',
   styleUrls: ['./feemanager.component.css']
 })
-export class FeemanagerComponent implements OnInit {
+export class FeemanagerComponent {
+
+ public studentsData: {studentname:string, balance: number}[] =[]
+  studentname: string | undefined;
+  balance: number | undefined
+  
+  addStudent(studentname: string, balance: number){
+
+    // console.log(`this is ${studentname.value} and ${balance.value}`)
+    this.studentsData.push({studentname, balance})
+    console.log(this.studentsData);
+    
+  }
+
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
