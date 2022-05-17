@@ -1,25 +1,58 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
+interface Student {
+  studentname: string
+  balance: number
+}
+
 @Component({
   selector: 'app-feemanager',
   templateUrl: './feemanager.component.html',
   styleUrls: ['./feemanager.component.css']
 })
+
 export class FeemanagerComponent {
 
- public studentsData: {studentname:string, balance: number}[] =[]
-  studentname: string | undefined;
-  balance: number | undefined
+
+  // formulating data from form
+  studentsData: Student [] =[]
+  data: Student[] =[] 
   
   addStudent(studentname: string, balance: number){
-
-    // console.log(`this is ${studentname.value} and ${balance.value}`)
     this.studentsData.push({studentname, balance})
-    console.log(this.studentsData);
     
   }
+  getAllStudents(){
+    return this.data = this.studentsData
+  }
+
+  getWithBalance(){
+    this.data = this.studentsData.filter((student):any=>{
+      if(student.balance<0){
+        return student        
+      }      
+    })
+  }
+
+  getWithoutBalance(){
+    this.data = this.studentsData.filter((student): any=>{
+      if(student.balance > 0){
+        return student
+
+      }   
+    })
+  }
+  
+  
 
 
-  constructor() { }
+  
+
+
+
+  constructor() {
+   }
 
 }

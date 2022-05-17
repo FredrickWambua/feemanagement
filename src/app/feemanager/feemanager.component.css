@@ -17,7 +17,7 @@
 .results-header {
     display: flex;
     justify-content: space-between;
-    background-color: orange;
+    background-color: coral;
     align-items: center;
     color: white;
 }
@@ -30,7 +30,7 @@ form >button{
 }
 
 h2 {
-    background-color: orange;
+    background-color: coral;
     color: white;
     padding: 10px;
 }
@@ -45,7 +45,7 @@ h2 {
 }
 
 button {
-    background-color: orange;
+    background-color: coral;
     color: white;
     border: none;
     padding: 5px;

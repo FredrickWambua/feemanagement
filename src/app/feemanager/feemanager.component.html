@@ -1,17 +1,17 @@
 <div class="container">
     <div class="form-section">
         <div class="form-header">
-            <h2>Add A Student</h2>
+            <h2>Add A Student On The Form</h2>
         </div>
         <form action="">
             <div class="field">
                 <label for="studentname">Student Name</label><br>
-                <input id="studentname" name="studentname" #newstudentname [(ngModel)]="studentname">
+                <input id="studentname" name="studentname" #newstudentname >
             </div>
             <pre></pre>
             <div class="field">
-                <label for="balance">Student balance</label><br>
-                <input id="balance" name="balance" #newbalance [(ngModel)]="balance">
+                <label type="text" for="balance">Student balance</label><br>
+                <input type="number" id="balance" name="balance" #newbalance >
             </div><br>
             <button type="submit" (click)="addStudent(newstudentname.value, +newbalance.value)">Add A Student</button>
         </form>
@@ -23,13 +23,15 @@
         </div>
         <pre></pre>
         <div class="sudents-buttons">
-            <button>Get All Students</button>
-            <button>Get Students With Balance</button>
-            <button>Get Student W/O Balance</button>
+            <button (click)="getAllStudents()">Get All Students</button>
+            <button (click)="getWithBalance()">Get Students With Balance</button>
+            <button (click)="getWithoutBalance()" >Get Student W/O Balance</button>
         </div>
-        <div class="datadisplay" *ngFor="let student of studentsData">
-            <p>{{student.studentname}}</p>
-            <p>{{student.balance | currency}}</p>
+        <div>
+            <div class="datadisplay" *ngFor="let student of data">
+                <p>{{student.studentname}}</p>
+                <p [ngStyle]="{color:student.balance>0?'green':'red'}">{{student.balance}}</p>
+            </div>
         </div>
     </div>
 </div>

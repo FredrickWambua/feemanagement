@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FeemanagerComponent } from './feemanager/feemanager.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FilteringPipe } from './filtering.pipe';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    FeemanagerComponent
+    FeemanagerComponent,
+    FilteringPipe
   ],
   imports: [
     BrowserModule,

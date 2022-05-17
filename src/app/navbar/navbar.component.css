@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     /* justify-content: space; */
-    border-bottom: solid orange 1px;
+    border-bottom: solid coral 1px;
     box-shadow: 10px 10px 30px -25px;
 }
 
@@ -12,5 +12,5 @@ img {
 h1 {
     text-align: center;
     margin-left: 30%;
-    color: orange;
+    color:coral;
 }
