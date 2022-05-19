@@ -13,6 +13,10 @@
     justify-content: center;
     align-items: center;
 }
+.hasname {
+    color: red;
+    display: none;
+}
 
 .results-header {
     display: flex;

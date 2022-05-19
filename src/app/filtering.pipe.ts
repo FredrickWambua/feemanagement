@@ -1,13 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { FeemanagerComponent } from './feemanager/feemanager.component';
 
 @Pipe({
   name: 'filtering'
 })
 export class FilteringPipe implements PipeTransform {
 
-  transform(balance: number): void {
-
+  transform(data:any): any {
+    if(data.balance<0){
+      return data  
+    }   
 
   }
 
